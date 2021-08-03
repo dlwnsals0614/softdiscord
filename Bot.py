@@ -67,5 +67,5 @@ async def on_message(message):
     if(message.content == "!시간"):
         await message.channel.send(embed=discord.Embed(title="Time", timestamp=datetime.datetime.utcnow()))
 
-access_token = os.environ['BOT_TOKEN"]
+access_token = os.environ['BOT_TOKEN']
 client.run(access_token)
