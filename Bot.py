@@ -67,9 +67,9 @@ async def on_message(message):
     if(message.content == "!시간"):
         await message.channel.send(embed=discord.Embed(title="Time", timestamp=datetime.datetime.utcnow()))
         
-    if content.startswith("!도"):
+    if content.startswith("!도움말"):
         embed=discord.Embed(description="!준민이 뺨따꾸 때리기\n!인백이의 드립은\n!자기소개\n!시간\n!시간표\n!월시간표\n!화시간표\n!수시간표\n!목시간표\n!금시간표", color=0x00ff56)
-        embed.set_author(name="명령어", url="")
+        embed.set_author(name="<<명령어>>", url="")
         await message.channel.send(embed=embed)
 
 access_token = os.environ['BOT_TOKEN']
