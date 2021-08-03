@@ -1,3 +1,2 @@
-discord.py==3.7.9
-asyncio.py==3.7.9
-datetime==3.7.9
+discord.py==1.7.3
+datetime==20.1.1
