@@ -11,7 +11,7 @@ async def on_ready():
     print("디스코드 봇 ID" +str(client.user.id))
     print("디스코드봇 버전 : " + str(discord.__version__))
     print('------')
-    await client.change_presence(status=discord.Status.online, activity=discord.Game("준민이 뺨때리기"))
+    await client.change_presence(status=discord.Status.online, activity=discord.Game("이원찬 찬양"))
 
 @client.event
 async def on_message(message):
