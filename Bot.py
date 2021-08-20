@@ -11,7 +11,13 @@ async def on_ready():
     print("디스코드 봇 ID" +str(client.user.id))
     print("디스코드봇 버전 : " + str(discord.__version__))
     print('------')
-    await client.change_presence(status=discord.Status.online, activity=discord.Game("Visual Studio Code"))
+    for i in range(9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999):
+        await client.change_presence(status=discord.Status.online, activity=discord.Game("Visual Studio Code "))
+        time.sleep(7)
+        await client.change_presence(status=discord.Status.online, activity=discord.Game("Bot Made By. 원찬,준민"))
+        time.sleep(7)
+        await client.change_presence(status=discord.Status.online, activity=discord.Game("Dev C++"))
+        time.sleep(7)
 
 @client.event
 async def on_message(message):
