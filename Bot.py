@@ -97,11 +97,11 @@ async def on_message(message):
             await message.channel.send("{}, 당신은 명령어를 사용할 수 있는 권한이 없습니다".format(message.author.mention))
 
         if message.content.startswith("!투표"):
-        vote = message.content[4:].split("/")
-        await message.channel.send("투표 - " + vote[0])
-        for i in range(1, len(vote)):
-            choose = await message.channel.send("" + vote[i] + "")
-            await choose.add_reaction(':check:')
+            vote = message.content[4:].split("/")
+            await message.channel.send("투표 - " + vote[0])
+            for i in range(1, len(vote)):
+                choose = await message.channel.send("" + vote[i] + "")
+                await choose.add_reaction(':check:')
             
 access_token = os.environ['BOT_TOKEN']
 client.run(access_token)
