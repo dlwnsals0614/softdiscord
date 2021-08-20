@@ -1,6 +1,7 @@
 import discord
 import datetime
 import os
+import time
 
 client = discord.Client()
 
