@@ -83,7 +83,7 @@ async def on_message(message):
             await message.channel.purge(limit=1)
             await message.channel.purge(limit=int(amount))
 
-            embed = discord.Embed(title="메시지 삭제 알림", description="최근 디스코드 채팅 {}개가\n관리자 {}님에 의해 삭제 되었습니다".format(amount, message.author), color=0x000000)
+            embed = discord.Embed(title="메시지 삭제 알림", description="최근 디스코드 채팅 {}개가\n관리자 {}님에 의해 삭제 되었습니다".format(amount, message.author), color=0x00ff56)
             await message.channel.send(embed=embed)
         
         if i is False:
