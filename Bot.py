@@ -27,6 +27,9 @@ async def on_message(message):
     
     if content.startswith("!준민이 뺨따구 때리기"):
         await message.channel.send("짝짝짝짝짝짝짝짝짝짝짝짝짝짝")
+        
+    if content.startswith("!씨발오류"):
+        await message.channel.send("ㅈ같네")
 
     if content.startswith("!자기소개"):
         embed=discord.Embed(description="응애 나는야 IT소프트웨어과 1-9 반디코 도우미 봇", color=0x00ff56)
