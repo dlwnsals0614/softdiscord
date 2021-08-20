@@ -74,6 +74,21 @@ async def on_message(message):
         embed=discord.Embed(description="!준민이 뺨따꾸 때리기\n!인백이의 드립은\n!자기소개\n!시간\n!시간표\n!월시간표\n!화시간표\n!수시간표\n!목시간표\n!금시간표", color=0x00ff56)
         embed.set_author(name="<<명령어>>", url="")
         await message.channel.send(embed=embed)
+    
+    if message.content.startswith ("!청소"):
+        i = (message.author.guild_permissions.administrator)
+
+        if i is True:
+            amount = message.content[4:]
+            await message.channel.purge(limit=1)
+            await message.channel.purge(limit=int(amount))
+
+            embed = discord.Embed(title="메시지 삭제 알림", description="최근 디스코드 채팅 {}개가\n관리자 {}님에 의해 삭제 되었습니다".format(amount, message.author), color=0x000000)
+            await message.channel.send(embed=embed)
+        
+        if i is False:
+            await message.channel.purge(limit=1)
+            await message.channel.send("{}, 당신은 명령어를 사용할 수 있는 권한이 없습니다".format(message.author.mention))
 
 access_token = os.environ['BOT_TOKEN']
 client.run(access_token)
