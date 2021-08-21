@@ -164,19 +164,17 @@ async def on_message(message):
     if content.startswith("!옵지"):
         nick = message.content[4:]
         embed=discord.Embed(description="오피지지 {} 바로가기\nhttps://www.op.gg/summoner/userName={}".format(nick,nick), color=0x00ff56)
-        embed.set_author("오피지지 검색")
         await message.channel.send(embed=embed)
         
     if content.startswith("!롤체"):
         nick = message.content[4:]
         embed=discord.Embed(description="롤체지지 {} 바로가기\nhttps://lolchess.gg/profile/kr/{}".format(nick,nick), color=0x00ff56)
-        embed.set_author("롤체지지 검색")
         await message.channel.send(embed=embed)
         
     if content.startswith("!닥지"):
         nick = message.content[4:]
         embed=discord.Embed(description="닥지지 {} 바로가기\nhttps://dak.gg/bser/players/{}".format(nick,nick), color=0x00ff56)
-        embed.set_author("닥지지 검색")
+        embed.set_author(name="<<{}>>".format(nick)
         await message.channel.send(embed=embed)
         
     if content.startswith("!음식지도"):
