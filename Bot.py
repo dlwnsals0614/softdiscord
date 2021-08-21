@@ -2,7 +2,6 @@ import discord
 import datetime
 import os
 import time
-import asyncio
 
 client = discord.Client()
 
@@ -13,7 +12,7 @@ async def on_ready():
     print("디스코드 봇 ID" +str(client.user.id))
     print("디스코드봇 버전 : " + str(discord.__version__))
     print('------')
-    await client.change_presence(status=discord.Status.online, activity=discord.Game("Visual Studio Code ")
+    await client.change_presence(status=discord.Status.online, activity=discord.Game("Visual Studio Code "))
 
 @client.event
 async def on_message(message):
@@ -254,5 +253,5 @@ async def on_message(message):
         embed.set_author(name=" ")
         await message.channel.send(embed=embed)
         
-access_token = os.environ['BOT_TOKEN']
+access_token = os.environ["BOT_TOKKEN"]
 client.run(access_token)
