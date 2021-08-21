@@ -16,7 +16,7 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=discord.Game("Visual Studio Code ")
 
 @client.event
-    async def on_message(message):
+async def on_message(message):
     content = message.content
     
     if content.startswith("!준민이 뺨따구 때리기"):
