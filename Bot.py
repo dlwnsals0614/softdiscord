@@ -99,6 +99,20 @@ async def on_message(message):
                 choose = await message.channel.send("" + vote[i] + "")
                 await choose.add_reaction(':check:')
                 
+    if message.content.startswith ("!공지"):
+        await message.channel.purge(limit=1)
+        i = (message.author.guild_permissions.administrator)
+        if i is True:
+            notice = message.content[4:]
+            channel = client.get_channel('')
+            embed = discord.Embed(title="**공지사항 제목*", description="\n――――――――――――――――――――――――――――\n\n{}\n\n――――――――――――――――――――――――――――".format(notice),timestamp=datetime.datetime.now(pytz.timezone('UTC')), color=0x00ff00)
+            embed.set_footer(text="Bot Made by. 이준민 | 담당 관리자 : {}".format(message.author))
+            await message.channel.send ("@everyone", embed=embed)
+            await message.author.send("```*[ BOT 자동 알림 ]* | 정상적으로 공지가 채널에 작성이 완료되었습니다 : )\n\n[ 기본 작성 설정 채널 ] : {}\n[ 공지 발신자 ] : {}\n\n[ 내용 ]\n{}```".format(channel, message.author, notice))
+       
+        if i is False:
+            await message.channel.send("{}, 당신은 관리자가 아닙니다".format(message.author.mention))
+    
     if content.startswith("!악동"):
         embed=discord.Embed(description="https://lolchess.gg/builder/set5.5?deck=891e2900e9ea11eb9b07371539a3adea", color=0x00ff56)
         embed.set_author(name="<<6악동  2기병대  2신비술사>>" , url="https://lolchess.gg/builder/set5.5?deck=891e2900e9ea11eb9b07371539a3adea")
@@ -150,36 +164,22 @@ async def on_message(message):
     if content.startswith("!옵지"):
         nick = message.content[4:]
         embed=discord.Embed(description="오피지지 {} 바로가기\nhttps://www.op.gg/summoner/userName={}".format(nick,nick), color=0x00ff56)
-        embed.set_author(name="<<{}>>".format(nick))
+        embed.set_author("<<{}>>".format(nick))
         await message.channel.send(embed=embed)
         
     if content.startswith("!롤체"):
         nick = message.content[4:]
-        embed=discord.Embed(description="오피지지 {} 바로가기\nhttps://www.op.gg/summoner/userName={}".format(nick,nick), color=0x00ff56)
-        embed.set_author(name="<<{}>>".format(nick))
+        embed=discord.Embed(description="롤체지지 {} 바로가기\nhttps://lolchess.gg/profile/kr/{}".format(nick,nick), color=0x00ff56)
+        embed.set_author("<<{}>>".format(nick))
         await message.channel.send(embed=embed)
         
-    if content.startswith("!이원찬"):
-        embed=discord.Embed(description="https://dak.gg/bser/players/plati", color=0x00ff56)
-        embed.set_author(name="plati")
-        await message.channel.send(embed=embed)
-    
-    if content.startswith("!최현영"):
-        embed=discord.Embed(description="https://dak.gg/bser/players/light00", color=0x00ff56)
-        embed.set_author(name="light00")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!최승민"):
-        embed=discord.Embed(description="https://dak.gg/bser/players/kokoakim", color=0x00ff56)
-        embed.set_author(name="kokoakim")
-        await message.channel.send(embed=embed)
-    
-    if content.startswith("!김인서"):
-        embed=discord.Embed(description="https://dak.gg/bser/players/폰틱", color=0x00ff56)
-        embed.set_author(name="폰틱")
+    if content.startswith("!닥지"):
+        nick = message.content[4:]
+        embed=discord.Embed(description="닥지지 {} 바로가기\nhttps://dak.gg/bser/players/{}".format(nick,nick), color=0x00ff56)
+        embed.set_author("<<{}>>".format(nick))
         await message.channel.send(embed=embed)
         
-    if content.startswith("!음식"):
+    if content.startswith("!음식지도"):
         embed=discord.Embed(title=" ", description=" ", color=0x00ff56)
         embed.set_author(name="```음식 지도```")
         embed.set_image(url="https://cdn.discordapp.com/attachments/873384182997479457/873384193722298398/common.png")
