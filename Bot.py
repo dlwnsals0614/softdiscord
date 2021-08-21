@@ -2,6 +2,7 @@ import discord
 import datetime
 import os
 import time
+import pytz
 
 client = discord.Client()
 
@@ -146,74 +147,16 @@ async def on_message(message):
     if(message.content == "!시간"):
         await message.channel.send(embed=discord.Embed(title="Time", timestamp=datetime.datetime.utcnow()))
         
-    if content.startswith("!옵지 붕벵빙봉"):
-        embed=discord.Embed(description="오피지지 붕벵빙봉 바로가기\nhttps://www.op.gg/summoner/userName=%EB%B6%95%EB%B2%B5%EB%B9%99%EB%B4%89", color=0x00ff56)
-        embed.set_author(name="<<붕벵빙봉>>")
+    if content.startswith("!옵지"):
+        nick = message.content[4:]
+        embed=discord.Embed(description="오피지지 {} 바로가기\nhttps://www.op.gg/summoner/userName={}".format(nick,nick), color=0x00ff56)
+        embed.set_author(name="<<{}>>".format(nick))
         await message.channel.send(embed=embed)
-
-    if content.startswith("!롤체 붕벵빙봉"):
-        embed=discord.Embed(description="롤체지지 붕벵빙봉 바로가기\nhttps://lolchess.gg/profile/kr/%EB%B6%95%EB%B2%B5%EB%B9%99%EB%B4%89", color=0x00ff56)
-        embed.set_author(name="<<붕벵빙봉>>")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!옵지 응애나아기롤리니"):
-        embed=discord.Embed(description="오피지지 응애나아기롤리니 바로가기\nhttps://www.op.gg/summoner/userName=응애나아기롤리니", color=0x00ff56)
-        embed.set_author(name="<<응애나아기롤리니>>")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!롤체 응애나아기롤리니"):
-        embed=discord.Embed(description="롤체지지 응애나아기롤리니 바로가기\nhttps://lolchess.gg/profile/kr/응애나아기롤리니", color=0x00ff56)
-        embed.set_author(name="<<응애나아기롤리니>>")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!옵지 챔원삐뽀"):
-        embed=discord.Embed(description="오피지지 챔원삐뽀 바로가기\nhttps://www.op.gg/summoner/userName=챔원삐뽀", color=0x00ff56)
-        embed.set_author(name="<<챔원삐뽀>>")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!롤체 챔원삐뽀"):
-        embed=discord.Embed(description="롤체지지 챔원삐뽀 바로가기\nhttps://lolchess.gg/profile/kr/챔원삐뽀", color=0x00ff56)
-        embed.set_author(name="<<챔원삐뽀>>")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!옵지 박죄현"):
-        embed=discord.Embed(description="오피지지 박 죄 현 바로가기\nhttps://www.op.gg/summoner/userName=박죄현", color=0x00ff56)
-        embed.set_author(name="<<박 죄 현>>")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!롤체 박죄현"):
-        embed=discord.Embed(description="롤체지지 박 죄 현 바로가기\nhttps://lolchess.gg/profile/kr/박죄현", color=0x00ff56)
-        embed.set_author(name="<<박 죄 현>>")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!옵지 먼치킨빵댕이"):
-        embed=discord.Embed(description="오피지지 먼치킨빵댕이 바로가기\nhttps://www.op.gg/summoner/userName=먼치킨빵댕이", color=0x00ff56)
-        embed.set_author(name="<<먼치킨빵댕이>>")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!롤체 먼치킨빵댕이"):
-        embed=discord.Embed(description="롤체지지 먼치킨빵댕이 바로가기\nhttps://lolchess.gg/profile/kr/먼치킨빵댕이", color=0x00ff56)
-        embed.set_author(name="<<먼치킨빵댕이>>")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!옵지 Lv1Midyuqi"):
-        embed=discord.Embed(description="오피지지 Lv1 Mid yuqi 바로가기\nhttps://lolchess.gg/profile/kr/lv1midyuqi", color=0x00ff56)
-        embed.set_author(name="<<Lv1 Mid yuqi>>")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!롤체 Lv1Midyuqi"):
-        embed=discord.Embed(description="롤체지지 Lv1 Mid yuqi 바로가기\nhttps://lolchess.gg/profile/kr/lv1midyuqi", color=0x00ff56)
-        embed.set_author(name="<<Lv1 Mid yuqi>>")
-        await message.channel.send(embed=embed)
-    
-    if content.startswith("!옵지 BurbleDust"):
-        embed=discord.Embed(description="오피지지 Burbledust 바로가기\nhttps://lolchess.gg/profile/kr/burbledust", color=0x00ff56)
-        embed.set_author(name="<<Burble Dust>>")
-        await message.channel.send(embed=embed)
-
-    if content.startswith("!롤체 BurbleDust"):
-        embed=discord.Embed(description="롤체지지 Burble Dust 바로가기\nhttps://lolchess.gg/profile/kr/burbledust", color=0x00ff56)
-        embed.set_author(name="<<Burble Dust>>")
+        
+    if content.startswith("!롤체"):
+        nick = message.content[4:]
+        embed=discord.Embed(description="오피지지 {} 바로가기\nhttps://www.op.gg/summoner/userName={}".format(nick,nick), color=0x00ff56)
+        embed.set_author(name="<<{}>>".format(nick))
         await message.channel.send(embed=embed)
         
     if content.startswith("!이원찬"):
