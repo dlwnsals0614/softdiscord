@@ -146,11 +146,6 @@ async def on_message(message):
         
     if(message.content == "!시간"):
         await message.channel.send(embed=discord.Embed(title="Time", timestamp=datetime.datetime.utcnow()))
-
-    if content.startswith("!도움"):
-        embed=discord.Embed(description="!롤체지지\n!악동\n!빛도자\n!괴생명체\n!시간\n!CBT\n!오피지지\n!롤체 <닉네임>\n!옵지 <닉네임>\n\n닉네임은 이 디코방에 있는 분만 등록 해놨습니다", color=0x00ff56)
-        embed.set_author(name="<<명령어>>")
-        await message.channel.send(embed=embed)
         
     if content.startswith("!옵지 붕벵빙봉"):
         embed=discord.Embed(description="오피지지 붕벵빙봉 바로가기\nhttps://www.op.gg/summoner/userName=%EB%B6%95%EB%B2%B5%EB%B9%99%EB%B4%89", color=0x00ff56)
