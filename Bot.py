@@ -3,6 +3,7 @@ import datetime
 import os
 import time
 import pytz
+import asyncio
 
 client = discord.Client()
 
