@@ -107,7 +107,7 @@ async def on_message(message):
             notice = message.content[4:]
             channel = client.get_channel('')
             embed = discord.Embed(title="**공지사항 제목*", description="\n――――――――――――――――――――――――――――\n\n{}\n\n――――――――――――――――――――――――――――".format(notice),timestamp=datetime.datetime.now(pytz.timezone('UTC')), color=0x00ff00)
-            embed.set_footer(text="Bot Made by. 이준민 | 담당 관리자 : {}".format(message.author))
+            embed.set_footer(text="공지 작성자 : {}".format(message.author))
             await message.channel.send ("@everyone", embed=embed)
             await message.author.send("```*[ BOT 자동 알림 ]* | 정상적으로 공지가 채널에 작성이 완료되었습니다 : )\n\n[ 기본 작성 설정 채널 ] : {}\n[ 공지 발신자 ] : {}\n\n[ 내용 ]\n{}```".format(channel, message.author, notice))
        
