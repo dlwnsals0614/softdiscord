@@ -77,9 +77,6 @@ async def on_message(message):
         embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
         embed.set_image(url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
         await message.channel.send(embed=embed)
-
-    if(message.content == "!시간"):
-        await message.channel.send(embed=discord.Embed(title="Time", timestamp=datetime.datetime.utcnow()))
         
     if content.startswith("!도움말"):
         embed=discord.Embed(description="!준민이 뺨따꾸 때리기\n!인백이의 드립은\n!자기소개\n!시간\n!청소 (청소할 메시지 개수)\n!투표/(투표항목)/(투표항목)...\n!시간표\n!월시간표\n!화시간표\n!수시간표\n!목시간표\n!금시간표", color=0x00ff55)
@@ -229,6 +226,43 @@ async def on_message(message):
     if content.startswith("!롤체 BurbleDust"):
         embed=discord.Embed(description="롤체지지 Burble Dust 바로가기\nhttps://lolchess.gg/profile/kr/burbledust", color=0x00ff56)
         embed.set_author(name="<<Burble Dust>>")
+        await message.channel.send(embed=embed)
+        
+    if content.startswith("!이원찬"):
+        embed=discord.Embed(description="https://dak.gg/bser/players/plati", color=0x00ff56)
+        embed.set_author(name="plati")
+        await message.channel.send(embed=embed)
+    
+    if content.startswith("!최현영"):
+        embed=discord.Embed(description="https://dak.gg/bser/players/light00", color=0x00ff56)
+        embed.set_author(name="light00")
+        await message.channel.send(embed=embed)
+
+    if content.startswith("!최승민"):
+        embed=discord.Embed(description="https://dak.gg/bser/players/kokoakim", color=0x00ff56)
+        embed.set_author(name="kokoakim")
+        await message.channel.send(embed=embed)
+    
+    if content.startswith("!김인서"):
+        embed=discord.Embed(description="https://dak.gg/bser/players/폰틱", color=0x00ff56)
+        embed.set_author(name="폰틱")
+        await message.channel.send(embed=embed)
+        
+    if content.startswith("!음식"):
+        embed=discord.Embed(title=" ", description=" ", color=0x00ff56)
+        embed.set_author(name="```음식 지도```")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/873384182997479457/873384193722298398/common.png")
+        await message.channel.send(embed=embed)
+
+    if content.startswith("!지도"):
+        embed=discord.Embed(title=" ", description=" ", color=0x00ff56)
+        embed.set_author(name="```지도```")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/873384182997479457/873384713216225341/common.png")
+        await message.channel.send(embed=embed)
+
+    if content.startswith("!레시피"):
+        embed=discord.Embed(description="```fix\n힐링포션```\n난초 + 유리병\n난초 = 약초 + 꽃\n========================\n```fix\n구급상자```\n지혈제 + 붕대\n지혈제 = 알코올 + 붕대\n========================\n```fix\n생선튀김```\n붕어 + 뜨거운 오일\n뜨거운 오일 = 오일 + 라이터\n========================\n```fix\n감자튀김```\n감자 + 뜨거운 오일\n뜨거운 오일 = 오일 + 라이터\n========================\n```fix\n피쉬앤칩스```\n감자튀김 + 생선튀김\n========================\n```fix\n햄버거```\n고기 + 빵\n========================\n```fix\n감자튀김```\n감자 + 뜨거운 오일\n뜨거운오일 = 라이터 + 오일\n========================\n```fix\n일레븐세트```\n햄버거 + 감자튀김\n========================", color=0x00ff56)
+        embed.set_author(name=" ")
         await message.channel.send(embed=embed)
         
 access_token = os.environ['BOT_TOKEN']
