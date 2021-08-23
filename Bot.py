@@ -39,38 +39,38 @@ async def on_message(message):
 
     if content.startswith("!시간표"):
         embed=discord.Embed(title=" ", description=" ", color=0x00ff56)
-        embed.set_author(name="```수원정보과학고등학교 1학년 9반 시간표```", url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
-        embed.set_image(url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
+        embed.set_author(name="```수원정보과학고등학교 1학년 9반 시간표```", url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
         await message.channel.send(embed=embed)
 
     if content.startswith("!월시간표"):
         embed=discord.Embed(description="<1교시>\n프로\n\n<2교시>\n프로\n\n<3교시>\n프로\n\n<4교시>\n프로\n\n<5교시>\n수학\n\n<6교시>\n사회\n이용각선생님", color=0x00ff56)
-        embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
-        embed.set_image(url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
+        embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
         await message.channel.send(embed=embed)
     
     if content.startswith("!화시간표"):
-        embed=discord.Embed(description="<1교시>\n사회\n이진경선생님\n\n<2교시>\n컴퓨터일반\n\n<3교시>\n컴퓨터일반\n\n<4교시>\n과학\n\n<5교시>\n진로\n\n<6교시>\n수학\n\n<7교시>\n영어", color=0x00ff56)
-        embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
-        embed.set_image(url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
+        embed=discord.Embed(description="<1교시>\n체육\n\n<2교시>\n컴일\n\n<3교시>\n컴일\n\n<4교시>\n영어\n\n<5교시>\n수학\n\n<6교시>\n음악<7교시>\n사회\n이진경선생님", color=0x00ff56)
+        embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
         await message.channel.send(embed=embed)
 
     if content.startswith("!수시간표"):
-        embed=discord.Embed(description="<1교시>\n체육\n\n<2교시>\n음악\n\n<3교시>\n국어\n\n<4교시>\n과학\n\n<5교시>\n영어\n\n<6교시>\n수학\n\n<7교시>\n사회\n이진경선생님", color=0x00ff56)
-        embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
-        embed.set_image(url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
+        embed=discord.Embed(description="<1교시>\n국어\n\n<2교시>\n음악\n\n<3교시>\n수학\n\n<4교시>\n영어\n\n<5교시>\n사회\n이용각선생님\n\n<6교시>\n국어\n\n<7교시>\n진로", color=0x00ff56)
+        embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
         await message.channel.send(embed=embed)
 
     if content.startswith("!목시간표"):
-        embed=discord.Embed(description="<1교시>\n음악\n\n<2교시>\n프로그래밍\n\n<3교시>\n프로그래밍\n\n<4교시>\n영어\n\n<5교시>\n국어\n\n<6교시>\n수학\n\n<7교시>\n사회\n이용각선생님", color=0x00ff56)
-        embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
-        embed.set_image(url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
+        embed=discord.Embed(description="<1교시>\n과학\n\n<2교시>\n프로\n\n<3교시>\n프로\n\n<4교시>\n체육\n\n<5교시>\n국어\n\n<6교시>\n영어\n\n<7교시>\n사회\n이진경선생님", color=0x00ff56)
+        embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
         await message.channel.send(embed=embed)
 
     if content.startswith("!금시간표"):
         embed=discord.Embed(description="<1교시>\n미술\n\n<2교시>\n미술\n\n<3교시>\n처리\n\n<4교시>\n처리\n\n<5교시>\n융합\n\n<6교시>\n창체", color=0x00ff56)
-        embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
-        embed.set_image(url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
+        embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
+        embed.set_image(url="https://cdn.discordapp.com/attachments/873384182997479457/879342240839905360/unknown.png")
         await message.channel.send(embed=embed)
         
     if content.startswith("!도움말"):
