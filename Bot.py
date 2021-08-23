@@ -44,7 +44,7 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
     if content.startswith("!월시간표"):
-        embed=discord.Embed(description="<1교시>\n프로그래밍\n\n<2교시>\n프로그래밍\n\n<3교시>\n프로그래밍\n\n<4교시>\n프로그래밍\n\n<5교시>\n체육\n\n<6교시>\n사회\n이용각선생님", color=0x00ff56)
+        embed=discord.Embed(description="<1교시>\n프로\n\n<2교시>\n프로\n\n<3교시>\n프로\n\n<4교시>\n프로\n\n<5교시>\n수학\n\n<6교시>\n사회\n이용각선생님", color=0x00ff56)
         embed.set_author(name="1-9 월요일 시간표", url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
         embed.set_image(url="https://cdn.discordapp.com/attachments/832047766817210388/832047839440928818/unknown_5.png")
         await message.channel.send(embed=embed)
